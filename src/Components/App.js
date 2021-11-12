@@ -7,6 +7,7 @@ import history from '../history';
 //Components
 import Auth from './Pages/Auth';
 import Dashboard from './Pages/Dashboard';
+import Home from './Pages/Home';
 import ProductSelect from './Pages/ProductSelect';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <div className='ui containter'>
       <Router history={history}>
         <>
-          <Route path='/' exact component={Auth} />
+          <Route path='/' exact component={Home} />
           <Route path='/dashboard' exact component={Dashboard} />
           <Route path='/products/:id' exact component={ProductSelect} />
         </>
