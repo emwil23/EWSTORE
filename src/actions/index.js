@@ -1,15 +1,42 @@
 //Types
-import { LOG_IN, LOG_OUT } from './types';
+import { LOG_IN, LOG_OUT, GET_ALL, GET_SELECT, REMOVE_SELECT } from './types';
+import history from '../history';
 
-export const logIn = (tokenId) => {
-  return {
-    type: LOG_IN,
-    payload: tokenId,
-  };
+//API call
+import api from '../Components/api/FakeStore';
+
+export const logIn = (formvalues) => async (dispatch) => {
+  const response = await api.post('/auth/login', { ...formvalues });
+
+  dispatch({ type: LOG_IN, payload: response.data });
+
+  //Redirect user
+  history.push('/dashboard');
 };
 
 export const logOut = () => {
   return {
     type: LOG_OUT,
+  };
+};
+
+export const getAllProducts = (token) => async (dispatch) => {
+  //Test phase check for token
+  if (token === '') dispatch({ type: 'ERROR', payload: 'ERROR' });
+  else {
+    const response = await api.get('/products');
+    dispatch({ type: GET_ALL, payload: response.data });
+  }
+};
+
+export const getSelectedProduct = (id) => async (dispatch) => {
+  const response = await api.get(`/products/${id}`);
+
+  dispatch({ type: GET_SELECT, payload: response.data });
+};
+
+export const removeSelectedProduct = () => {
+  return {
+    type: REMOVE_SELECT,
   };
 };
