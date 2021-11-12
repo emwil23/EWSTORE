@@ -1,5 +1,12 @@
 //Types
-import { LOG_IN, LOG_OUT, GET_ALL, GET_SELECT, REMOVE_SELECT } from './types';
+import {
+  LOG_IN,
+  LOG_OUT,
+  GET_ALL,
+  GET_SELECT,
+  REMOVE_SELECT,
+  REMOVE_ERROR,
+} from './types';
 import history from '../history';
 
 //API call
@@ -27,6 +34,12 @@ export const getAllProducts = (token) => async (dispatch) => {
     const response = await api.get('/products');
     dispatch({ type: GET_ALL, payload: response.data });
   }
+};
+
+export const removeError = () => {
+  return {
+    type: REMOVE_ERROR,
+  };
 };
 
 export const getSelectedProduct = (id) => async (dispatch) => {

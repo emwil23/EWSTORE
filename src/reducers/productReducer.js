@@ -18,6 +18,8 @@ export const productsReducer = (state = INITIAL_STATE, action) => {
     case 'ERROR':
       return { ...state, errors: action.payload };
 
+    case 'REMOVE_ERROR':
+      return { ...state, errors: '' };
     default:
       return state;
   }

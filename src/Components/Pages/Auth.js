@@ -1,46 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { logIn, logOut } from '../../actions';
-// import axios from 'axios';
-
-// import { Field, reduxForm } from 'redux-form';
+import { logIn, logOut, removeError } from '../../actions';
 
 class Auth extends React.Component {
-  // state = { token: '' };
   componentDidMount() {
     this.props.logOut();
-    console.log('On Mount ' + this.props.token);
+    this.props.removeError();
+    // console.log('On Mount ' + this.props.token);
   }
 
   componentDidUpdate() {
-    // this.nextPage(this.state.token);
-    // this.props.logIn('');
-    console.log('On Update ' + this.props.token);
+    // console.log('On Update ' + this.props.token);
   }
 
-  /* getToken = () => {
-    axios
-      .post('https://fakestoreapi.com/auth/login', {
-        username: 'mor_2314',
-        password: '83r5^_',
-      })
-      .then((res) => {
-        this.props.logIn(res.data.token);
-        console.log(res.data.token);
-        // this.setState({ token: res.data.token });
-      })
-      .catch((err) => console.log(err));
-  }; */
-
-  /* OnSubmit = (event) => {
-    event.preventDefault();
-    axios
-      .post('https://fakestoreapi.com/auth/login', {
-        username: `${event.target.username.value}`,
-        password: `${event.target.password.value}`,
-      })
-      .then((res) => this.props.logIn(res.data.token));
-  }; */
   //For Async Action
   OnSubmit = (event) => {
     event.preventDefault();
@@ -95,4 +67,4 @@ const mapStateToProps = (state) => {
 
 // const myOwnConnect = connect(mapStateToProps, { logIn })(Auth);
 
-export default connect(mapStateToProps, { logIn, logOut })(Auth);
+export default connect(mapStateToProps, { logIn, logOut, removeError })(Auth);
