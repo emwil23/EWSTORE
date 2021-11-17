@@ -1,2 +1,11 @@
 @import './base';
 @import './mixins';
+@import './typography';
+
+// SASS FOR COMPONENTS
+@import './home';
+@import './login';
+@import './dashboard';
+@import './productCard';
+@import './loginModal';
+@import './accountinfo';

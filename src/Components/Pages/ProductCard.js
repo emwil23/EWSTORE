@@ -1,58 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function ProductCard(props) {
   //Render List
   const renderList = props.products.map((product) => {
-    const { id, title, price, image, category } = product;
+    const { id, title, price, image, description } = product;
 
     return (
-      <div className='four wide column' key={id}>
-        <Link to={`/products/${id}`}>
-          <div className='ui link cards'>
-            <div className='card'>
-              <div
-                className='image'
-                style={{
-                  height: '250px',
-                  padding: '20px',
-                  background: '#fff',
-                  margin: 'auto',
-                }}
-              >
-                <img
-                  src={image}
-                  alt={title}
-                  style={{ height: '100%', maxWidth: '100%', width: 'auto' }}
-                />
-              </div>
-              <div className='content'>
-                <div
-                  className='header'
-                  style={{
-                    height: '48px',
-                    overflow: 'hidden',
-                    marginBottom: '5px',
-                  }}
-                >
-                  {title}
-                </div>
-                <div
-                  className='meta price'
-                  style={{
-                    marginBottom: '5px',
-                    fontSize: '18px',
-                    color: '#333',
-                    fontWeight: '600',
-                  }}
-                >
-                  $ {price}
-                </div>
-                <div className='meta'>{category}</div>
-              </div>
+      <div className='card'>
+        <img className='card__img' src={image} alt={id} />
+        <div className='card__overlay'>
+          <div className='card__header'>
+            <svg className='card__arc' xmlnsXlink='http://www.w3.org/200/svg'>
+              <path d='M 40 80 c 22 0 40 -22 40 -40 v 40 Z' />
+            </svg>
+            <div className='card__header-text'>
+              <h3 className='card__title'>{title}</h3>
+              <span className='card__price'>{'$ ' + price}</span>
             </div>
           </div>
-        </Link>
+          <p className='card__description'>{description}</p>
+        </div>
       </div>
     );
   });
@@ -62,3 +29,20 @@ function ProductCard(props) {
 }
 
 export default ProductCard;
+
+/* DEMO OF THE CODE
+<a href="" class="card">
+      <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+          <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+          <div class="card__header-text">
+            <h3 class="card__title">Jessica Parker</h3>            
+            <span class="card__status">1 hour ago</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+*/

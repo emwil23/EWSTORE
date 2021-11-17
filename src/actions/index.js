@@ -5,13 +5,18 @@ import {
   GET_ALL,
   GET_SELECT,
   REMOVE_SELECT,
-  REMOVE_ERROR,
+  GET_USER,
+  REMOVE_USER,
+  GET_CATEGORY,
+  GET_CART,
+  REMOVE_CART,
 } from './types';
 import history from '../history';
 
 //API call
 import api from '../Components/api/FakeStore';
 
+// LOGIN ACTION
 export const logIn = (formvalues) => async (dispatch) => {
   const response = await api.post('/auth/login', { ...formvalues });
 
@@ -21,35 +26,73 @@ export const logIn = (formvalues) => async (dispatch) => {
   history.push('/dashboard');
 };
 
+//LOGOUT ACTION
 export const logOut = () => {
   return {
     type: LOG_OUT,
   };
 };
 
-export const getAllProducts = (token) => async (dispatch) => {
-  //Test phase check for token
-  if (token === '') dispatch({ type: 'ERROR', payload: 'ERROR' });
-  else {
-    const response = await api.get('/products');
-    dispatch({ type: GET_ALL, payload: response.data });
-  }
+//USER GET ACTION
+export const getUserInfo = (id) => async (dispatch) => {
+  const response = await api.get(`/users/${id}`);
+
+  dispatch({ type: GET_USER, payload: response.data });
 };
 
-export const removeError = () => {
+//USER REMOVE ACTION
+export const removeUserInfo = () => {
   return {
-    type: REMOVE_ERROR,
+    type: REMOVE_USER,
   };
 };
 
+// PRODUCTS GET ACTION
+export const getAllProducts = () => async (dispatch) => {
+  //Test phase check for token
+  // if (token === '') dispatch({ type: 'ERROR', payload: 'ERROR' });
+  // else {
+  const response = await api.get('/products');
+  dispatch({ type: GET_ALL, payload: response.data });
+};
+
+/* export const removeError = () => {
+  return {
+    type: REMOVE_ERROR,
+  };
+}; */
+
+// PRODUCT SELECT GET ACTION
 export const getSelectedProduct = (id) => async (dispatch) => {
   const response = await api.get(`/products/${id}`);
 
   dispatch({ type: GET_SELECT, payload: response.data });
 };
 
+//PRODUCT SELECT REMOVE ACTION
 export const removeSelectedProduct = () => {
   return {
     type: REMOVE_SELECT,
   };
+};
+
+// PRODUCT CATEGORY GET ACTION
+export const getCategory = (category) => async (dispatch) => {
+  const response = await api.get(
+    `https://fakestoreapi.com/products/category/${category}`
+  );
+
+  dispatch({ type: GET_CATEGORY, payload: response.data });
+};
+
+//CART GET ACTION
+export const getCartDetails = (id) => async (dispatch) => {
+  const response = await api.get(`https://fakestoreapi.com/carts/${id}`);
+
+  dispatch({ type: GET_CART, payload: response.data });
+};
+
+//CART REMOVE ACTION
+export const removeCartDetails = () => {
+  return { type: REMOVE_CART };
 };

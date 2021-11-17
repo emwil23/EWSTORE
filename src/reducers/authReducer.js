@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   token: '',
+  userInfo: {},
 };
 
 export const authReducer = (state = INITIAL_STATE, action) => {
@@ -8,6 +9,11 @@ export const authReducer = (state = INITIAL_STATE, action) => {
       return { ...state, token: action.payload };
     case 'LOG_OUT':
       return { ...state, token: '' };
+
+    case 'GET_USER':
+      return { ...state, userInfo: action.payload };
+    case 'REMOVE_USER':
+      return { ...state, userInfo: {} };
     default:
       return state;
   }

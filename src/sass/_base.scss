@@ -1,0 +1,33 @@
+//Colors
+:root {
+  --color-primary: #ffcfdf;
+  --color-secondary: #fefdca;
+  --color-fade-green: #e0f9b5;
+  --color-fade-blue: #a5dee5;
+}
+
+//Styling
+$border-light: 1px solid rgba(grey, 0.5);
+
+//FONT FAMILY
+$font-primary: 'Cabin', sans-serif;
+
+//Initial setup
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.6;
+}

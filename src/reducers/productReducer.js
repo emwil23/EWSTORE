@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
   products: [],
   product: {},
-  errors: '',
+  cart: {},
 };
 
 export const productsReducer = (state = INITIAL_STATE, action) => {
@@ -15,11 +15,20 @@ export const productsReducer = (state = INITIAL_STATE, action) => {
     case 'REMOVE_SELECT':
       return { ...state, product: {} };
 
-    case 'ERROR':
+    case 'GET_CATEGORY':
+      return { ...state, products: action.payload };
+
+    case 'GET_CART':
+      return { ...state, cart: action.payload };
+
+    case 'REMOVE_CART':
+      return { ...state, cart: {} };
+
+    /* case 'ERROR':
       return { ...state, errors: action.payload };
 
     case 'REMOVE_ERROR':
-      return { ...state, errors: '' };
+      return { ...state, errors: '' }; */
     default:
       return state;
   }
