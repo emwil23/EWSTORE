@@ -1,8 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 //Actions
 import { getSelectedProduct } from '../../actions';
+
+//SVGs and Images
+import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
+import { ReactComponent as Iconrating } from '../../assets/rating.svg';
 
 class ProductSelect extends React.Component {
   componentDidMount() {
@@ -11,57 +16,55 @@ class ProductSelect extends React.Component {
   }
 
   render() {
-    const { image, title, price, category, description } =
+    const { image, title, price, category, description, id, rating } =
       this.props.selectedProduct;
-    console.log(image);
 
     return Object.keys(this.props.selectedProduct).length === 0 ? (
-      <div class='ui segment' style={{ height: '100vh' }}>
-        <div class='ui active inverted dimmer'>
-          <div class='ui indeterminate text loader'>Preparing Files</div>
+      <div className='loader__container'>
+        <div class='loading'>
+          <div class='dot'></div>
+          <div class='dot'></div>
+          <div class='dot'></div>
+          <div class='dot'></div>
         </div>
-        <p></p>
       </div>
     ) : (
-      <div className='ui placeholder segment' style={{}}>
-        <div className='ui two column stackable center aligned grid'>
-          <div className='ui vertical divider'>AND</div>
-          <div className='middle aligned row'>
-            <div
-              className='column lp'
-              style={{
-                padding: '20px 40px 20px 20px',
-                alignSelf: 'flex-start !important',
-                height: '75%',
-              }}
-            >
-              <img
-                className='ui fluid image'
-                src={image}
-                style={{ height: '100%' }}
-              />
+      <div className='proSelect__container'>
+        <div className='proSelect__logo'>
+          <IconLogo className='proSelect__logo-icon' />
+        </div>
+        <div className='proSelect__container-inner'>
+          <div className='product__container'>
+            <div className='proSelect__back'>
+              <Link to={'/dashboard'}>
+                <button className='backToHome-btn'>&lt;</button>
+              </Link>
             </div>
-            <div
-              className='column rp'
-              style={{
-                padding: '20px 20px 20px 40px',
-                alignSelf: 'flex-start !important',
-                textAlign: 'left',
-              }}
-            >
-              <h1 style={{ color: '#333' }}>{title}</h1>
-              <h2>
-                <a className='ui teal tag label' style={{ fontSize: '22px' }}>
-                  ${price}
-                </a>
-              </h2>
-              <h3 className='ui brown block header'>{category}</h3>
-              <p style={{ fontSize: '18px', color: '#777' }}>{description}</p>
-              <div className='ui vertical animated button' tabIndex='0'>
-                <div className='hidden content'>
-                  <i className='shop icon'></i>
+            <div className='product__image'>
+              <img src={image} alt={id} className='product__image-img' />
+            </div>
+            <div className='product__details'>
+              <div className='product__details--title heading-2'>{title}</div>
+              <div className='seperator' />
+              <div className='product__details--price heading-2'>${price}</div>
+              <div className='product__details--category heading-3'>
+                {category}
+              </div>
+              <div className='product__details--rating'>
+                <div className='product__details--rating-icon'>
+                  <Iconrating className='product__details--rating-icon-1' />
                 </div>
-                <div className='visible content'>Add to Cart</div>
+                <div className='product__details--rating-stats'>
+                  <div className='product__details--rating-rate heading-3'>
+                    {rating.rate}
+                  </div>
+                  <div className='product__details--rating-count heading-3'>
+                    votes: {rating.count}
+                  </div>
+                </div>
+              </div>
+              <div className='product__details--description heading-3'>
+                {description}
               </div>
             </div>
           </div>

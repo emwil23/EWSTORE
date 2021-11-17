@@ -18,20 +18,16 @@ import {
   removeSelectedProduct,
   logOut,
   getCategory,
+  removeCategory,
 } from '../../actions';
 
 class Dashboard extends React.Component {
-  state = { category: '' };
+  // state = { category: '' };
 
   componentDidMount() {
-    if (this.state.category === '') this.props.getAllProducts();
-    else this.props.getCategory(this.state.category);
+    this.props.getAllProducts();
 
     this.props.removeSelectedProduct();
-  }
-
-  componentDidUpdate(_prevProps, prevState) {
-    if (prevState.category !== '') this.props.getCategory(this.state.category);
   }
 
   render() {
@@ -47,7 +43,7 @@ class Dashboard extends React.Component {
               <li className='category__list--1'>
                 <button
                   className='category__list-btn'
-                  onClick={() => this.setState({ category: 'electronics' })}
+                  onClick={() => this.props.getCategory('electronics')}
                 >
                   Electronics
                   <div>
@@ -58,7 +54,7 @@ class Dashboard extends React.Component {
               <li className='category__list--2'>
                 <button
                   className='category__list-btn'
-                  onClick={() => this.setState({ category: 'jewelery' })}
+                  onClick={() => this.props.getCategory('jewelery')}
                 >
                   Jewelery
                   <div>
@@ -69,7 +65,7 @@ class Dashboard extends React.Component {
               <li className='category__list--3'>
                 <button
                   className='category__list-btn'
-                  onClick={() => this.setState({ category: "men's clothing" })}
+                  onClick={() => this.props.getCategory("men's clothing")}
                 >
                   Men's Clothing
                   <div>
@@ -80,9 +76,7 @@ class Dashboard extends React.Component {
               <li className='category__list--4'>
                 <button
                   className='category__list-btn'
-                  onClick={() =>
-                    this.setState({ category: "women's clothing" })
-                  }
+                  onClick={() => this.props.getCategory("women's clothing")}
                 >
                   Women's Clothing
                   <div>
@@ -135,6 +129,7 @@ export default connect(stateMapToProps, {
   removeSelectedProduct,
   logOut,
   getCategory,
+  removeCategory,
 })(Dashboard);
 
 //FETCHING ALL PRODUCTS

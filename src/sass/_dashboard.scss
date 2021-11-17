@@ -9,6 +9,8 @@
     var(--color-secondary)
   );
 
+  // background-color: rgba(black, 0.4);
+
   grid-template-columns: repeat(10, [col-start] 1fr [col-end]);
   grid-template-rows: [header-start] 15vh [header-end content-start] 75vh [content-end logout-start] 10vh [logout-end];
 }

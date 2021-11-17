@@ -9,3 +9,4 @@ export const REMOVE_USER = 'REMOVE_USER';
 export const GET_CATEGORY = 'GET_CATEGORY';
 export const GET_CART = 'GET_CART';
 export const REMOVE_CART = 'REMOVE_CART';
+export const REMOVE_CATEGORY = 'REMOVE_CATEGORY';

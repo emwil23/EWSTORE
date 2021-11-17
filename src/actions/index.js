@@ -10,6 +10,7 @@ import {
   GET_CATEGORY,
   GET_CART,
   REMOVE_CART,
+  REMOVE_CATEGORY,
 } from './types';
 import history from '../history';
 
@@ -83,6 +84,13 @@ export const getCategory = (category) => async (dispatch) => {
   );
 
   dispatch({ type: GET_CATEGORY, payload: response.data });
+};
+
+// PRODUCT CATEGORY REMOVE ACTION
+export const removeCategory = () => {
+  return {
+    type: REMOVE_CATEGORY,
+  };
 };
 
 //CART GET ACTION

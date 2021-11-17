@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ProductCard(props) {
   //Render List
@@ -6,21 +7,23 @@ function ProductCard(props) {
     const { id, title, price, image, description } = product;
 
     return (
-      <div className='card'>
-        <img className='card__img' src={image} alt={id} />
-        <div className='card__overlay'>
-          <div className='card__header'>
-            <svg className='card__arc' xmlnsXlink='http://www.w3.org/200/svg'>
-              <path d='M 40 80 c 22 0 40 -22 40 -40 v 40 Z' />
-            </svg>
-            <div className='card__header-text'>
-              <h3 className='card__title'>{title}</h3>
-              <span className='card__price'>{'$ ' + price}</span>
+      <Link to={`/products/${id}`}>
+        <div className='card'>
+          <img className='card__img' src={image} alt={id} />
+          <div className='card__overlay'>
+            <div className='card__header'>
+              <svg className='card__arc' xmlnsXlink='http://www.w3.org/200/svg'>
+                <path d='M 40 80 c 22 0 40 -22 40 -40 v 40 Z' />
+              </svg>
+              <div className='card__header-text'>
+                <h3 className='card__title'>{title}</h3>
+                <span className='card__price'>{'$ ' + price}</span>
+              </div>
             </div>
+            <p className='card__description'>{description}</p>
           </div>
-          <p className='card__description'>{description}</p>
         </div>
-      </div>
+      </Link>
     );
   });
   //   console.log(props.products.map());
