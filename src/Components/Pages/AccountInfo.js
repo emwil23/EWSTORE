@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 //Images and SVGs
 import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
 import { ReactComponent as IconAvatar } from '../../assets/avatar.svg';
+import MapBox from './MapBox';
 
 class AccountInfo extends React.Component {
   render() {
@@ -85,6 +87,17 @@ class AccountInfo extends React.Component {
                   readOnly={true}
                 ></input>
               </div>
+            </div>
+            <div className='info-address--map'>
+              <div className='info-address--header heading-3'>
+                LoggedIn location
+              </div>
+              <MapBox />
+            </div>
+            <div className='backToHome'>
+              <Link to={'/dashboard'}>
+                <button className='backToHome-btn'>&lt;</button>
+              </Link>
             </div>
           </div>
         </div>

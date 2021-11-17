@@ -57,12 +57,15 @@
   background-color: white;
   border-radius: 3rem;
   padding: 3rem 3rem;
+  margin-bottom: 5rem;
 
   // overflow-y: auto;
 
   & > * {
     margin-bottom: 2rem;
   }
+
+  position: relative;
 }
 
 //BLOCKS IN INFO
@@ -218,6 +221,32 @@
       padding: 1rem 2rem;
       border-radius: 1rem;
       width: 45%;
+    }
+
+    &--map {
+      width: 100%;
+      height: 30rem;
+    }
+  }
+}
+
+.backToHome {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: -15%;
+
+  &-btn {
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    border-radius: 3rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-fade-blue);
+      box-shadow: 0 0.5rem 1rem rgba(black, 0.5);
     }
   }
 }
