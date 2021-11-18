@@ -1,0 +1,43 @@
+.cartProduct {
+  &__container {
+    display: flex;
+    align-items: center;
+
+    border: $border-light;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+
+    overflow: hidden;
+    padding: 1rem 1rem;
+  }
+
+  &__image {
+    height: 5rem;
+    width: 5rem;
+    &-1 {
+      height: 90%;
+      width: 90%;
+    }
+  }
+
+  &__info {
+    margin-left: 2rem;
+    &-heading {
+      font-weight: 300;
+    }
+
+    &-content {
+      display: flex;
+      &--price {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      &--qty {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        color: grey;
+      }
+    }
+  }
+}
