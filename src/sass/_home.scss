@@ -15,6 +15,11 @@
     var(--color-primary),
     var(--color-secondary)
   ); */
+
+  @media only screen and (max-width: $bp-small) {
+    overflow-y: auto;
+    padding-bottom: 2rem;
+  }
 }
 
 //Home header
@@ -45,16 +50,40 @@
   box-sizing: border-box;
   align-items: center;
 
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &-icon {
     height: 50rem;
     margin-left: 3rem;
     margin-top: 0rem;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 50rem;
+      margin-left: 0;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 30rem;
+    }
   }
   &-info {
     margin-right: 20rem;
     margin-top: -15rem;
     line-height: 1.6;
     width: 30rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-top: 5rem;
+      margin-right: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     &--title {
     }

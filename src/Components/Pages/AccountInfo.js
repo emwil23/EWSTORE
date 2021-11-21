@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 //Images and SVGs
-import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
+// import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
 import { ReactComponent as IconAvatar } from '../../assets/avatar.svg';
 import MapBox from './MapBox';
 
@@ -12,7 +12,7 @@ class AccountInfo extends React.Component {
     return (
       <div className='container__acountinfo'>
         <div className='info__logo'>
-          <IconLogo className='info__logo-icon' />
+          {/* <IconLogo className='info__logo-icon' /> */}
         </div>
         <div className='info__menu'></div>
         <div className='info__content'>

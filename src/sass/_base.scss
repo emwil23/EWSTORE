@@ -4,6 +4,7 @@
   --color-secondary: #fefdca;
   --color-fade-green: #e0f9b5;
   --color-fade-blue: #a5dee5;
+  --color-fade-grey: #706c61;
 }
 
 //Styling
@@ -11,6 +12,13 @@ $border-light: 1px solid rgba(grey, 0.5);
 
 //FONT FAMILY
 $font-primary: 'Cabin', sans-serif;
+
+//Screen sizes
+$bp-largest: 75em; //1200px / 16px : 75em
+$bp-large: 68.75em; //1100px / 16px : 68.75em
+$bp-medium: 56.25em; //900px / 16px : 56.25em
+$bp-small: 37.5em; //600px / 16px : 37.5em
+$bp-smallest: 23.43em; //375px / 16px : 23.43em
 
 //Initial setup
 *,
@@ -24,6 +32,10 @@ $font-primary: 'Cabin', sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {

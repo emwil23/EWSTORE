@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { getSelectedProduct } from '../../actions';
 
 //SVGs and Images
-import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
+// import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
 import { ReactComponent as Iconrating } from '../../assets/rating.svg';
 
 class ProductSelect extends React.Component {
@@ -31,7 +31,7 @@ class ProductSelect extends React.Component {
     ) : (
       <div className='proSelect__container'>
         <div className='proSelect__logo'>
-          <IconLogo className='proSelect__logo-icon' />
+          {/* <IconLogo className='proSelect__logo-icon' /> */}
         </div>
         <div className='proSelect__container-inner'>
           <div className='product__container'>

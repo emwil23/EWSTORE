@@ -9,7 +9,7 @@ import Accordian from '../Accordian';
 import CartProducts from './CartProducts';
 
 //SVGs and Images
-import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
+// import { ReactComponent as IconLogo } from '../../assets/logo-hollow.svg';
 
 class Cart extends React.Component {
   state = { isActive: false, totalPrice: 0 };
@@ -38,7 +38,7 @@ class Cart extends React.Component {
     ) : (
       <div className='cart__container-main'>
         <div className='cart__logo'>
-          <IconLogo className='cart__logo-icon' />
+          {/* <IconLogo className='cart__logo-icon' /> */}
         </div>
         <div className='cart__container-secondary'>
           <div className='cart__content'>

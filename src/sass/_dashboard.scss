@@ -9,10 +9,17 @@
     var(--color-secondary)
   );
 
-  // background-color: rgba(black, 0.4);
+  // background-color: rgba(black, 0.7);
 
   grid-template-columns: repeat(10, [col-start] 1fr [col-end]);
   grid-template-rows: [header-start] 15vh [header-end content-start] 75vh [content-end logout-start] 10vh [logout-end];
+}
+
+//Loading Window
+.dashboard__content-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dashboard {
@@ -62,6 +69,7 @@
     gap: 2rem;
     padding: 0;
     overflow-y: auto;
+    padding-bottom: 2rem;
   }
 }
 

@@ -108,9 +108,22 @@ class Dashboard extends React.Component {
             </button>
           </div>
         )}
-        <div className='dashboard__content'>
-          <ProductCard products={this.props.allProducts} />
-        </div>
+        {Object.keys(this.props.allProducts).length === 0 ? (
+          <div className='dashboard__content'>
+            <div className='dashboard__content-loading'>
+              <div class='loading'>
+                <div class='dot'></div>
+                <div class='dot'></div>
+                <div class='dot'></div>
+                <div class='dot'></div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className='dashboard__content'>
+            <ProductCard products={this.props.allProducts} />
+          </div>
+        )}
       </div>
     );
   }
