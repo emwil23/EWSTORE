@@ -4,8 +4,9 @@ A store app works on FakeApiStore APIs.
 
 ## Overview
 
-This app consist of all the facilities in a full fledged store from haiving item display to cart and payment.
-Some of the features like add to cart and payment dosen't work as the server dosen't actutally lets you update data.
+This app consist of all the facilities in a full fledged store from displaying items to cart and payments.
+Some of the features like add to cart, payment and update users data dosen't work as the server dosen't actutally lets you update data.
+If provided in later stages can be implemented easily.
 
 ### What can you do ?
 
