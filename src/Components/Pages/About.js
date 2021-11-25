@@ -10,7 +10,7 @@ const About = () => {
     <div className='about__container-main'>
       <div className='about__container-secondary'>
         <div className='about__back'>
-          <Link to={'/dashboard'}>
+          <Link to={'/EWSTORE/dashboard'}>
             <button className='backToHome-btn'>&lt;</button>
           </Link>
         </div>

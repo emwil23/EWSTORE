@@ -101,7 +101,7 @@ class Auth extends React.Component {
           </div>
           <div className='login-options'>
             <div className='login-option--1'>
-              <Link to={'/info'}>
+              <Link to={'/EWSTORE/info'}>
                 <button className='option-btn'>
                   Account Info
                   <IconInfo className='option-icon' />
@@ -109,7 +109,7 @@ class Auth extends React.Component {
               </Link>
             </div>
             <div className='login-option--2'>
-              <Link to={'/cart'}>
+              <Link to={'/EWSTORE/cart'}>
                 <button
                   className='option-btn'
                   onClick={() => {
@@ -122,7 +122,7 @@ class Auth extends React.Component {
               </Link>
             </div>
             <div className='login-option--3'>
-              <Link to={'/about'}>
+              <Link to={'/EWSTORE/about'}>
                 <button className='option-btn'>
                   About
                   <img

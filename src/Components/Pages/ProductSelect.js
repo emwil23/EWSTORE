@@ -36,7 +36,7 @@ class ProductSelect extends React.Component {
         <div className='proSelect__container-inner'>
           <div className='product__container'>
             <div className='proSelect__back'>
-              <Link to={'/dashboard'}>
+              <Link to={'/EWSTORE/dashboard'}>
                 <button className='backToHome-btn'>&lt;</button>
               </Link>
             </div>

@@ -29,7 +29,7 @@ class Home extends React.Component {
               This uses FakeStoreAPI, all the info you see are fake and genrated
               by the API.
             </p>
-            <Link to={'/dashboard'}>
+            <Link to={'/EWSTORE/dashboard'}>
               <button className='btn-shopnow'>Enter Shop</button>
             </Link>
             {/* <Link className='btn-shopnow' to={'/dashboard'}>

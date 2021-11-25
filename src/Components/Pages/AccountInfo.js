@@ -95,7 +95,7 @@ class AccountInfo extends React.Component {
               <MapBox />
             </div>
             <div className='backToHome'>
-              <Link to={'/dashboard'}>
+              <Link to={'/EWSTORE/dashboard'}>
                 <button className='backToHome-btn'>&lt;</button>
               </Link>
             </div>

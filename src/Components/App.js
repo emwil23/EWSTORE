@@ -7,7 +7,7 @@ import history from '../history';
 //Components
 import Auth from './Pages/Auth';
 import Dashboard from './Pages/Dashboard';
-import Home from './Pages/Home';
+import HomePage from './Pages/Home';
 import ProductSelect from './Pages/ProductSelect';
 import About from './Pages/About';
 import AccountInfo from './Pages/AccountInfo';
@@ -19,12 +19,12 @@ function App() {
       <Router history={history}>
         <Auth />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/dashboard' exact component={Dashboard} />
-          <Route path='/products/:id' exact component={ProductSelect} />
-          <Route path='/about' exact component={About} />
-          <Route path='/info' exact component={AccountInfo} />
-          <Route path='/cart' exact component={Cart} />
+          <Route path='/EWSTORE' exact component={HomePage} />
+          <Route path='/EWSTORE/dashboard' exact component={Dashboard} />
+          <Route path='/EWSTORE/products/:id' exact component={ProductSelect} />
+          <Route path='/EWSTORE/about' exact component={About} />
+          <Route path='/EWSTORE/info' exact component={AccountInfo} />
+          <Route path='/EWSTORE/cart' exact component={Cart} />
         </Switch>
       </Router>
     </div>

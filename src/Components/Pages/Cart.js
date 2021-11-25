@@ -43,7 +43,7 @@ class Cart extends React.Component {
         <div className='cart__container-secondary'>
           <div className='cart__content'>
             <div className='cart__back'>
-              <Link to={'/dashboard'}>
+              <Link to={'/EWSTORE/dashboard'}>
                 <button className='backToHome-btn'>&lt;</button>
               </Link>
             </div>

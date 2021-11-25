@@ -7,7 +7,7 @@ function ProductCard(props) {
     const { id, title, price, image, description } = product;
 
     return (
-      <Link to={`/products/${id}`}>
+      <Link to={`/EWSTORE/products/${id}`}>
         <div className='card'>
           <img className='card__img' src={image} alt={id} />
           <div className='card__overlay'>

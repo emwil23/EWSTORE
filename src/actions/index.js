@@ -24,7 +24,7 @@ export const logIn = (formvalues) => async (dispatch) => {
   dispatch({ type: LOG_IN, payload: response.data });
 
   //Redirect user
-  history.push('/dashboard');
+  history.push('/EWSTORE/dashboard');
 };
 
 //LOGOUT ACTION
