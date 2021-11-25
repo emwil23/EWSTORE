@@ -24,5 +24,6 @@ The APP is not yet responsive(supports laptops and desktop screens).
 
 #### Wanna try it out
 
+USE CHROME FOR A BETTER EXPERIENCE AS NO WEBKITS OR MOZ BEING USED.
 https://emwil23.github.io/EWSTORE/
 
