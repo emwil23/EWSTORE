@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/EWSTORE/static/css/main.9caf865f.chunk.css",
+    "main.js": "/EWSTORE/static/js/main.d6e0518d.chunk.js",
+    "main.js.map": "/EWSTORE/static/js/main.d6e0518d.chunk.js.map",
+    "runtime-main.js": "/EWSTORE/static/js/runtime-main.98a2a16d.js",
+    "runtime-main.js.map": "/EWSTORE/static/js/runtime-main.98a2a16d.js.map",
+    "static/js/2.82a478e1.chunk.js": "/EWSTORE/static/js/2.82a478e1.chunk.js",
+    "static/js/2.82a478e1.chunk.js.map": "/EWSTORE/static/js/2.82a478e1.chunk.js.map",
+    "index.html": "/EWSTORE/index.html",
+    "static/css/main.9caf865f.chunk.css.map": "/EWSTORE/static/css/main.9caf865f.chunk.css.map",
+    "static/js/2.82a478e1.chunk.js.LICENSE.txt": "/EWSTORE/static/js/2.82a478e1.chunk.js.LICENSE.txt",
+    "static/media/about.aa4a251e.svg": "/EWSTORE/static/media/about.aa4a251e.svg",
+    "static/media/avatar.9cd93e08.svg": "/EWSTORE/static/media/avatar.9cd93e08.svg",
+    "static/media/cat-ele.92e1c5fe.svg": "/EWSTORE/static/media/cat-ele.92e1c5fe.svg",
+    "static/media/cat-jew.2ac9b46c.svg": "/EWSTORE/static/media/cat-jew.2ac9b46c.svg",
+    "static/media/cat-men.e905364c.svg": "/EWSTORE/static/media/cat-men.e905364c.svg",
+    "static/media/cat-women.9cf49c8a.svg": "/EWSTORE/static/media/cat-women.9cf49c8a.svg",
+    "static/media/home-blob.e761c7c2.svg": "/EWSTORE/static/media/home-blob.e761c7c2.svg",
+    "static/media/home-sale.b3b0c3eb.svg": "/EWSTORE/static/media/home-sale.b3b0c3eb.svg",
+    "static/media/main.scss": "/EWSTORE/static/media/image-content.9faff9ae.jpg",
+    "static/media/logo-hollow.1649e284.svg": "/EWSTORE/static/media/logo-hollow.1649e284.svg",
+    "static/media/logout.21d6ce5f.svg": "/EWSTORE/static/media/logout.21d6ce5f.svg",
+    "static/media/rating.ff7fc12e.svg": "/EWSTORE/static/media/rating.ff7fc12e.svg",
+    "static/media/sprite.d1bf4748.svg": "/EWSTORE/static/media/sprite.d1bf4748.svg",
+    "static/media/user-about.1e2453c5.jpg": "/EWSTORE/static/media/user-about.1e2453c5.jpg",
+    "static/media/user-cart.ec352660.svg": "/EWSTORE/static/media/user-cart.ec352660.svg",
+    "static/media/user-info.f788a778.svg": "/EWSTORE/static/media/user-info.f788a778.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98a2a16d.js",
+    "static/js/2.82a478e1.chunk.js",
+    "static/css/main.9caf865f.chunk.css",
+    "static/js/main.d6e0518d.chunk.js"
+  ]
+}
