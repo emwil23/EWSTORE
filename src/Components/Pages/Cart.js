@@ -74,7 +74,12 @@ class Cart extends React.Component {
                           required
                         />
                       </div>
-                      <button className='cart__form--btn'>
+                      <button
+                        className='cart__form--btn'
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
+                      >
                         PAY $ {this.state.totalPrice}
                       </button>
                     </form>
@@ -93,7 +98,10 @@ class Cart extends React.Component {
                           required
                         />
                       </div>
-                      <button className='cart__form--btn'>
+                      <button
+                        className='cart__form--btn'
+                        onClick={(e) => e.preventDefault()}
+                      >
                         PAY $ {this.state.totalPrice}
                       </button>
                     </form>
