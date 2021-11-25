@@ -20,6 +20,8 @@ The state managementt is done by using REDUX and routing by REACT ROUTER.
 The components are dynamic as the cards are displayed as per the data.
 Redux-Thunk is being used for async network request.
 
+The APP is not yet responsive(supports laptops and desktop screens).
+
 #### Wanna try it out
 
 https://emwil23.github.io/EWSTORE/
